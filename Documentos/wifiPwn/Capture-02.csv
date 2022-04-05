@@ -1,0 +1,15 @@
+
+BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+88:DE:7C:AB:05:EF, 2022-03-02 10:29:27, 2022-03-02 10:29:42,  6, 130, WPA2, CCMP, PSK, -75,       15,        2,   0.  0.  0.  0,   9, Alejandro, 
+
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+02:2E:32:0A:60:E6, 2022-03-02 10:29:24, 2022-03-02 10:29:24, -84,        1, (not associated) ,
+EE:7F:BB:77:44:15, 2022-03-02 10:29:27, 2022-03-02 10:29:42, -74,        8, 88:DE:7C:AB:05:EF,
+00:15:6D:9C:78:8F, 2022-03-02 10:29:26, 2022-03-02 10:29:43, -74,       11, (not associated) ,ubnt
+E0:09:BF:4F:03:41, 2022-03-02 10:29:28, 2022-03-02 10:29:28, -72,        1, D8:FB:5E:42:93:2E,
+E0:09:BF:50:02:AC, 2022-03-02 10:29:27, 2022-03-02 10:29:27, -70,        1, D8:FB:5E:42:93:2E,
+86:D8:1B:07:46:A4, 2022-03-02 10:29:27, 2022-03-02 10:29:27, -44,        2, F4:6B:EF:D3:ED:3B,
+D8:13:99:AC:39:10, 2022-03-02 10:29:27, 2022-03-02 10:29:27, -42,        2, F4:6B:EF:D3:ED:3B,
+2E:E0:10:A8:73:1E, 2022-03-02 10:29:35, 2022-03-02 10:29:38, -18,       10, (not associated) ,
+AC:E0:10:A8:73:1E, 2022-03-02 10:29:32, 2022-03-02 10:29:35, -18,        8, (not associated) ,
+

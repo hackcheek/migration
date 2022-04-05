@@ -1,0 +1,2 @@
+Emular control-d en un script
+> exec >&-
