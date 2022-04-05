@@ -1,0 +1,79 @@
+Database: cmsmsdb
+Table: cms_adminlog
++-----------------------------------------------+---------+---------------+------------------------------------------------------------------------+----------+------------------------------------+-------------+
+| item_id| user_id | ip_addr | action                                                             | username | item_name                          | timestamp   |
++-----------------------------------------------+---------+---------------+------------------------------------------------------------------------+----------+------------------------------------+-------------+
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621872363  |
+| 2  | 2 | 192.168.43.16 | Logged In                                                              | editor   | Admin Username: editor             | 1621872374  |
+| 2  | 2 | 192.168.43.16 | Logged Out                                                             | editor   | Admin Username: editor             | 1621872404  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621934155  |
+| 2  | 1 | 192.168.43.16 | Deleted                                                                | admin    | Admin Username:                    | 1621934171  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621871421  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621871563  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621871577  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621871609  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621871916  |
+| 1  | 1 | 192.168.43.16 | Edited                                                                 | admin    | Admin Username: admin              | 1621872024  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621872044  |
+| 1  | 1 | 192.168.43.16 | Changed                                                                | admin    | Permission Group ID: 1             | 1621872082  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621872097  |
+| 2  | 1 | 192.168.43.16 | Added                                                                  | admin    | Admin Username: editor             | 1621872214  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621872363  |
+| 1  | 1 | 192.168.43.16 | Changed                                                                | admin    | Permission Group ID: 1             | 1621934227  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621934332  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621934734  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621935067  |
+| -1 | 1 | 192.168.43.16 | Cannot connect to ModuleRepository                                     | admin    | ModuleManager                      | 1621935077  |
+| 22 | 1 | 192.168.43.16 | Template Simplex News Summary Deleted                                  | admin    | CMSMS                              | 1621935090  |
+| 21 | 1 | 192.168.43.16 | Template News Summary Sample Deleted                                   | admin    | CMSMS                              | 1621935090  |
+| 6  | 1 | 192.168.43.16 | Template Type summary Deleted                                          | admin    | CMSMS                              | 1621935090  |
+| 24 | 1 | 192.168.43.16 | Template Simplex News Detail Deleted                                   | admin    | CMSMS                              | 1621935090  |
+| 23 | 1 | 192.168.43.16 | Template News Detail Sample Deleted                                    | admin    | CMSMS                              | 1621935090  |
+| 7  | 1 | 192.168.43.16 | Template Type detail Deleted                                           | admin    | CMSMS                              | 1621935090  |
+| 25 | 1 | 192.168.43.16 | Template News Fesubmit Form Sample Deleted                             | admin    | CMSMS                              | 1621935090  |
+| 8  | 1 | 192.168.43.16 | Template Type form Deleted                                             | admin    | CMSMS                              | 1621935090  |
+| 26 | 1 | 192.168.43.16 | Template News Browse Category Sample Deleted                           | admin    | CMSMS                              | 1621935090  |
+| 9  | 1 | 192.168.43.16 | Template Type browsecat Deleted                                        | admin    | CMSMS                              | 1621935090  |
+| -1 | 1 | 192.168.43.16 | Uninstalled module News                                                | admin    | Module                             | 1621935091  |
+| -1 | 1 | 192.168.43.16 | Cannot connect to ModuleRepository                                     | admin    | ModuleManager                      | 1621935096  |
+| 2  | 1 | 192.168.43.16 | Deleted                                                                | admin    | User Defined Tag: custom_copyright | 1621935230  |
+| 1  | 1 | 192.168.43.16 | Deleted                                                                | admin    | User Defined Tag: user_agent       | 1621935232  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621935258  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621935488  |
+| 3  | 1 | 192.168.43.16 | Added                                                                  | admin    | Admin Username: editor             | 1621935513  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621935517  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621935572  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621935639  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621935656  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621935679  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621935709  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621935767  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621935875  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621935889  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621935902  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621935936  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621935940  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621935986  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621936021  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621936071  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621936175  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621936214  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621936232  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1621936311  |
+| 1  | 1 | 192.168.43.16 | Changed                                                                | admin    | Permission Group ID: 1             | 1621936374  |
+| -1 | 1 | 192.168.43.16 | Received 404 response when trying to trigger async processing          | admin    | CmsJobManager                      | 1621936495  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1621936495  |
+| -1 | 3 | 10.10.14.23   | Received 404 response when trying to trigger async processing          | editor   | CmsJobManager                      | 1632951061  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1622013155  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1622013162  |
+| -1 | 3 | 10.10.14.23   | Received 404 response when trying to trigger async processing          | editor   | CmsJobManager                      | 1632950876  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1622013188  |
+| 1  | 1 | 192.168.43.16 |  Edited                                                                | admin    | Admin Username: editor             | 1622013238  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1622013242  |
+| -1 | 3 | 10.10.14.23   | Received 404 response when trying to trigger async processing          | editor   | CmsJobManager                      | 1632950603  |
+| -1 | 3 | 10.10.14.23   | Received 404 response when trying to trigger async processing          | editor   | CmsJobManager                      | 1632950421  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1622051336  |
+| 1  | 1 | 192.168.43.16 | Edited                                                                 | admin    | Admin Username: admin              | 1622051355  |
+| 1  | 1 | 192.168.43.16 | Logged In                                                              | admin    | Admin Username: admin              | 1622051639  |
+| 1  | 1 | 192.168.43.16 | Logged Out                                                             | admin    | Admin Username: admin              | 1622051642  |
++-----------------------------------------------+---------+---------------+------------------------------------------------------------------------+----------+------------------------------------+-------------+e

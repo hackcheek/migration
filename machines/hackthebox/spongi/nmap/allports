@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Mar 27 19:52:43 2022 as: nmap -sS --min-rate 5000 -p- -n -Pn --open -oG allports 10.10.110.101
+Host: 10.10.110.101 ()	Status: Up
+Host: 10.10.110.101 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///, 8080/open/tcp//http-proxy///
+# Nmap done at Sun Mar 27 19:56:07 2022 -- 1 IP address (1 host up) scanned in 204.27 seconds

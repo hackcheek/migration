@@ -1,0 +1,24 @@
+# Nmap 7.92 scan initiated Wed Mar  9 21:02:21 2022 as: nmap -p 22,80,10000 -sCV -n -v -oN scriptscan.txt 10.10.11.146
+Nmap scan report for 10.10.11.146
+Host is up (0.17s latency).
+
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 8.2 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 be:66:06:dd:20:77:ef:98:7f:6e:73:4a:98:a5:d8:f0 (RSA)
+|   256 1f:a2:09:72:70:68:f4:58:ed:1f:6c:49:7d:e2:13:39 (ECDSA)
+|_  256 70:15:39:94:c2:cd:64:cb:b2:3b:d1:3e:f6:09:44:e8 (ED25519)
+80/tcp    open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Diana's Jewelry
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+10000/tcp open  http    SimpleHTTPServer 0.6 (Python 3.8.10)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: SimpleHTTP/0.6 Python/3.8.10
+|_http-title: Directory listing for /
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  9 21:02:59 2022 -- 1 IP address (1 host up) scanned in 38.36 seconds

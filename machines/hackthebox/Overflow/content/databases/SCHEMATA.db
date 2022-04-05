@@ -1,0 +1,10 @@
+Table: SCHEMATA
+[4 entries]
++----------+--------------------+--------------+------------------------+----------------------------+
+| SQL_PATH | SCHEMA_NAME        | CATALOG_NAME | DEFAULT_COLLATION_NAME | DEFAULT_CHARACTER_SET_NAME |
++----------+--------------------+--------------+------------------------+----------------------------+
+| <blank>  | information_schema | def          | utf8_general_ci        | utf8                       |
+| <blank>  | Overflow           | def          | latin1_swedish_ci      | latin1                     |
+| <blank>  | cmsmsdb            | def          | latin1_swedish_ci      | latin1                     |
+| <blank>  | logs               | def          | latin1_swedish_ci      | latin1                     |
++----------+--------------------+--------------+------------------------+----------------------------+

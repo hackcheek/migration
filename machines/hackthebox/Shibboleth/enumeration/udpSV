@@ -1,0 +1,13 @@
+# Nmap 7.92 scan initiated Fri Apr  1 10:47:44 2022 as: nmap -p 623 -sCV -sU -oN udpSV 10.10.11.124
+Nmap scan report for shibboleth.htb (10.10.11.124)
+Host is up (0.17s latency).
+
+PORT    STATE SERVICE  VERSION
+623/udp open  asf-rmcp
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port623-UDP:V=7.92%I=7%D=4/1%Time=62470286%P=x86_64-pc-linux-gnu%r(ipmi
+SF:-rmcp,1E,"\x06\0\xff\x07\0\0\0\0\0\0\0\0\0\x10\x81\x1cc\x20\x008\0\x01\
+SF:x97\x04\x03\0\0\0\0\t");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr  1 10:47:50 2022 -- 1 IP address (1 host up) scanned in 5.99 seconds
